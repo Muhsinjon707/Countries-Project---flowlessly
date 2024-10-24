@@ -1,0 +1,242 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Nunito Sans", sans-serif;
+  background-color: #fafafa;
+}
+
+.container {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* header */
+
+header {
+  background-color: white;
+  box-shadow: 0px 2px 4px 0px #0000000e;
+  padding-top: 29px;
+  padding-bottom: 29px;
+  margin-bottom: 48px;
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__container .logo a {
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 32.74px;
+  text-align: left;
+  color: #111517;
+}
+
+.header__container .mode p {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 21.82px;
+    text-align: left;
+    align-items: start;
+    cursor: pointer;
+}
+
+.header__container .mode img {
+    width: 20px;
+    height: 20px;
+}
+
+/* header ends */
+
+/* filter */
+
+.filter {
+    margin-bottom: 48px;
+}
+
+.filter__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.filter__container .search {
+    width: 480px;
+    background-color: white;
+    box-shadow: 0px 0px 7px 2px #00000008;
+    padding: 19px 32px;
+    border-radius: 5px;
+
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.filter__container .search input {
+    border: none;
+    outline: none;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+    color: #848484;
+}
+
+.filter__container .dropdown .dropdown-options {
+    display: none;
+}
+
+.filter__container .dropdown-head {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+    box-shadow: 0px 2px 9px 0px #0000000E;
+    border-radius: 5px;
+    padding: 18px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 200px;
+    font-size: 14px;
+    cursor: pointer;
+    background-color: white;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-options {
+    box-shadow: 0px 2px 9px 0px #0000000E;
+    width: 200px;
+    flex-direction: column;
+    list-style: none;
+    gap: 8px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: left;
+    color: #111517;
+    padding: 16px 24px;
+    margin-top: 4px;
+    background-color: white;
+
+    position: absolute;
+}
+
+.dropdown-options li {
+    cursor: pointer;
+}
+
+.dropdown:hover .dropdown-options {
+    display: flex;
+}
+
+/* filter ends */
+
+/* countries */
+
+.block__container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    align-content: center;
+}
+
+.block {
+    margin-bottom: 75px;
+    box-shadow: 0px 0px 7px 2px #00000008;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.block img {
+    width: 100%;
+    height: 160px;
+    border-top-left-radius: 5px;;
+    border-top-right-radius: 5px;;
+}
+
+.block .block-info {
+    padding: 24px;
+}
+
+.block-info h3 {
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 26px;
+    text-align: left;
+    color: #111517;
+    margin-bottom: 16px;
+}
+
+.block-info p {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 16px;
+    text-align: left;
+    margin-bottom: 8px;
+}
+
+.block-info p span {
+    font-weight: 600;
+}
+
+
+/* media quarries */
+
+@media screen and (max-width: 1280px) {
+    .container {
+        max-width: 90%;
+    }
+}
+
+@media screen and (max-width: 1160px) {
+    .block {
+        width: 33%
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .filter__container {
+        flex-direction: column;
+        align-items: start;
+        gap: 40px;
+    }
+
+    .filter__container .search {
+        max-width: 400px;
+        width: 100%;
+    }
+
+    .block {
+        width: 47%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .header__container .logo a {
+        font-size: 20px;
+    }
+
+    .block {
+        width: 95%;
+        margin: auto;
+        margin-bottom: 40px;
+    }
+}
